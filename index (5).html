@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Establece el idioma de la página a español -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Responsiva</title>
+
+    <!-- Enlace a Google Fonts -->
+    <!-- Aquí estamos importando la fuente 'Roboto' desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace a Bootstrap para aplicar estilos y componentes predefinidos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Encabezado con Bootstrap -->
+    <header class="bg-primary text-white text-center py-4">
+        <!-- bg-primary: color de fondo azul (clase de Bootstrap) -->
+        <!-- text-white: texto en color blanco -->
+        <!-- text-center: alinea el texto al centro -->
+        <!-- py-4: añade padding vertical (arriba y abajo) de 4 unidades -->
+        <h1>Página Responsiva</h1>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container mt-4">
+        <!-- container: crea un contenedor responsivo que centra el contenido y aplica márgenes -->
+        <!-- mt-4: añade margen superior de 4 unidades -->
+        <div class="row">
+            <!-- row: crea una fila para la cuadrícula de Bootstrap -->
+            <!-- Las columnas se distribuyen dentro de la fila -->
+
+            <!-- Columna principal -->
+            <div class="col-md-8">
+                <!-- col-md-8: ocupa 8 de las 12 columnas disponibles en pantallas medianas y superiores -->
+                <p>Este es el contenido principal de la página.</p>
+
+                <!-- Elemento visible solo en pantallas grandes -->
+                <p class="d-none d-md-block text-success">
+                    <!-- d-none d-md-block: Oculta el elemento en pantallas pequeñas y lo muestra en medianas y grandes. -->
+                    Este mensaje solo se muestra en pantallas medianas en adelante (md+).
+                    <br> <!-- Salto de línea para separar el texto de la imagen -->
+                    <img src="./img/pantalla-del-monitor.png" alt="Monitor" class="img-fluid"
+                        style="max-width: 100%; height: auto;">
+                    <!-- img-fluid: clase de Bootstrap que hace que la imagen sea responsiva -->
+                </p>
+
+                <!-- Elemento oculto en pantallas grandes y visible en móviles -->
+                <p class="d-block d-md-none text-danger">
+                    <!-- d-block d-md-none: Muestra el elemento en pantallas pequeñas y lo oculta en medianas y grandes. -->
+                    Este mensaje solo se muestra en pantallas pequeñas (sm).
+                    <br> <!-- Salto de línea para separar el texto de la imagen -->
+                    <img src="./img/disposicion-responsive.png" alt="Monitor" class="img-fluid"
+                        style="max-width: 100%; height: auto;">
+                    <!-- img-fluid: clase de Bootstrap que hace que la imagen sea responsiva -->
+                </p>
+            </div>
+
+            <!-- Barra lateral -->
+            <div class="col-md-4">
+                <!-- col-md-4: ocupa 4 de las 12 columnas disponibles en pantallas medianas y superiores -->
+                <p>Información adicional o widgets</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <!-- bg-dark: color de fondo negro -->
+        <!-- text-white: texto en color blanco -->
+        <!-- text-center: alinea el texto al centro -->
+        <!-- py-3: añade padding vertical de 3 unidades -->
+        <!-- mt-4: añade margen superior de 4 unidades -->
+        <p>&copy; 2024 Mi Página. Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Inclusión de scripts de Bootstrap y jQuery para la funcionalidad interactiva -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
